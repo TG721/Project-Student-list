@@ -93,3 +93,18 @@ c.className="hide";
 // li.appendChild(studentName);
 // li.appendChild(deleteButton);
 // studlist.appendChild(li);
+
+
+function myFunction() {
+    var studentArray = [];
+    console.log("nibaa");
+    var studentCollection = document.getElementsByClassName('student')
+    console.log(studentCollection)
+    for(let i=0; i<studentCollection.length; i++)
+    studentArray.push(studentCollection[i].textContent);
+    studentArray.sort((a, b) => a.toLowerCase().charCodeAt(0) - b.toLowerCase().charCodeAt(0));
+    console.log(studentArray)
+    for(let i=0; i<studentCollection.length; i++)
+    studentCollection[i].textContent=studentArray[i];
+    
+    }
